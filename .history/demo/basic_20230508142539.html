@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>spotify-dm demo</title>
+    <script>
+      window.IntlMsg = window.IntlMsg || {};
+      window.IntlMsg.lang = document.documentElement.lang;
+      window.IntlMsg.localesHost = '.';
+    </script>
+    <script type="module" src="./demo.js"></script>
+  </head>
+
+  <body>
+    <spotify-dm></spotify-dm>
+    <button id="login" class="button">Iniciar sesion</button>
+    <button id="getToken" class="button">Obtener token</button>
+
+    <script>
+      const dm = document.querySelector('spotify-dm');
+
+      dm.redirect_url = "http://localhost:8000/demo/index.html";
+
+      const loginButton = document.querySelector('#login')  
+      const tokenButton = document.querySelector('#getToken');
+
+      loginButton.addEventListener('click',() => {
+        dm.getAuthorize();
+      });
+
+      tokenButton.addEventListener('click', () => {
+        dm.getToken();
+      })
+
+
+    </script>
+  </body>
+</html>
