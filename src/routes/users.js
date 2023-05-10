@@ -8,8 +8,7 @@ export class User {
             }
         })
             .then(res => res.json())
-            .then(res => res);
-    }
+            .then(res => res);    }
 
     async getUsersTracksAndArtist() {
         const _token = window.sessionStorage.getItem('token')

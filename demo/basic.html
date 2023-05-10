@@ -48,6 +48,9 @@
     <button id="getUserProfile" class="button">Obtener la informacion del usuario</button>
     <button id="getTopUser" class="button">Obtener las recomendaciones del usuario</button>
 
+    <h2>Album</h2>
+    <button id="getAlbum" class="button">Obtener un album</button>
+
     <script>
       const dm = document.querySelector('spotify-dm');
 
@@ -71,6 +74,11 @@
       const getTopUser = document.querySelector('#getTopUser');
       getTopUser.addEventListener('click', () => {
           dm.getTopUser();
+      })
+
+      const getAlbum = document.querySelector('#getAlbum');
+      getAlbum.addEventListener('click', () => {
+          dm.getAlbum('3RQQmkQEvNCY4prGKE6oc5');
       })
 
     </script>

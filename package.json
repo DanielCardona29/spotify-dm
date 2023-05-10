@@ -1,5 +1,5 @@
 {
-  "name": "@Music-for-life/spotify-dm",
+  "name": "@music-for-life/spotify-dm",
   "version": "1.0.0-rc.1",
   "description": "",
   "keywords": [],
@@ -15,6 +15,10 @@
     "*.js",
     "!**/*.scss"
   ],
+  "scripts": {
+    "start": "cells lit-component:serve",
+    "test": "cells lit-component:test"
+  },
   "dependencies": {
     "@bbva-web-components/bbva-core-lit-helpers": "^1.0.0",
     "@bbva-web-components/bbva-foundations-styles": "^2.0.0",
