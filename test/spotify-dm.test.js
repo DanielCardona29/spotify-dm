@@ -38,7 +38,7 @@ suite('SpotifyDm', () => {
       expect(await el.getAuthorize()).equal(true);
     });
 
-    test('get token', async()=>{
+    test('get token', async () => {
       expect(await el.getToken()).equal(undefined);
     })
 
@@ -103,6 +103,50 @@ suite('SpotifyDm', () => {
         }
       }
       expect(JSON.stringify(await el.getSavedAlbums())).equal(JSON.stringify(response));
+    });
+
+
+    test('get artist', async () => {
+      const response = {
+        "error": {
+          "status": 401,
+          "message": "Invalid access token"
+        }
+      }
+      expect(JSON.stringify(await el.getArtist())).equal(JSON.stringify(response));
+    });
+
+
+    test('get multiples artist', async () => {
+      const response = {
+        "error": {
+          "status": 401,
+          "message": "Invalid access token"
+        }
+      }
+      expect(JSON.stringify(await el.getMultiplesArtist())).equal(JSON.stringify(response));
+    });
+
+
+    test('get artist top tracks', async () => {
+      const response = {
+        "error": {
+          "status": 401,
+          "message": "Invalid access token"
+        }
+      }
+      expect(JSON.stringify(await el.getArtistTopTracks())).equal(JSON.stringify(response));
+    });
+
+
+    test('get related artist', async () => {
+      const response = {
+        "error": {
+          "status": 401,
+          "message": "Invalid access token"
+        }
+      }
+      expect(JSON.stringify(await el.getRelatedArtist())).equal(JSON.stringify(response));
     });
 
 
